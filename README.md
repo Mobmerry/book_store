@@ -1,8 +1,8 @@
 ## README
 
-#interview_challenge_api
+##Book Store API
 
-## API Endpoints and Sample Requests
+### API Endpoints and Sample Requests
 
 ---------------------------------------------------------------------------------------------
 
@@ -12,10 +12,10 @@
    curl -v -H "Content-Type: application/json" -X GET http://localhost:3000/api/v1/books
   ```
 
-  ###Sample Response
+###Sample Response
 ===============================================
 
-```
+```javascript
 HTTP/1.1 200 OK
 
   [
@@ -41,16 +41,16 @@ HTTP/1.1 200 OK
 ```
 
 
-2.[POST] BOOK
+###2.[POST] BOOK
 -----------------------------------------------------------------------------------------------------
 
   ```
     curl -v -H "Content-Type: application/json" -X POST GET http://localhost:3000/api/v1/books -d '{ "book" : { "publisher" : "O really", "author" : "some one", "categories" : "movies", "title" : "something" } }'
   ```
 
-  ###Sample Response
+###Sample Response
 ===============================================
-```
+```javascript
 HTTP/1.1 201 Created
 
   {
@@ -67,15 +67,15 @@ HTTP/1.1 201 Created
 ```
 
 
-3.[GET] BOOK
+###3.[GET] BOOK
 --------------------------------------------------------------------------------------------------------
   ```
   curl -v -H "Content-Type: application/json" -X GET http://localhost:3000/api/v1/books/:id
   ```
 
-  ###Sample Response
+###Sample Response
 ===============================================
-```
+```javascript
 HTTP/1.1 200 OK
 
   {
@@ -90,7 +90,7 @@ HTTP/1.1 200 OK
 ```
 
 
-4.[PUT] BOOK_CHECKOUT
+###4.[PUT] BOOK CHECKOUT
 -------------------------------------------------------------------------------------------------------
   ```
   curl -v -H "Content-Type: application/json" -X PUT http://localhost:3000/api/v1/books/:id -d '{"lastCheckedOutBy": "kumar"}'
@@ -98,7 +98,7 @@ HTTP/1.1 200 OK
 
 ###Sample Response
 ===============================================
-```
+```javascript
 HTTP/1.1 200 OK
   {
     "author":"steven shankar",
@@ -111,7 +111,7 @@ HTTP/1.1 200 OK
 ```
 
 
-5.[DELETE] BOOK
+###5.[DELETE] BOOK
 --------------------------------------------------------------------------------------------------------------------
 ```
   curl -v -H "Content-Type: application/json" -X DELETE http://localhost:3000/api/v1/books/:id
@@ -119,13 +119,13 @@ HTTP/1.1 200 OK
 
 ###Sample Response
 ===============================================
-```
+```javascript
 HTTP/1.1 204 No content
   {
   }
 ```
 
-6.[DELETE] CLEAN_BOOKS
+###6.[DELETE] CLEAN BOOKS
 -------------------------------------------------------------------------------------------------------------------
 ```
   curl -v -H "Content-Type: application/json" -X DELETE http://localhost:3000/api/v1/clean
@@ -133,7 +133,7 @@ HTTP/1.1 204 No content
 
 ###Sample Response
 ===============================================
-```
+```javascript
 HTTP/1.1 200 OK
   {
   }
